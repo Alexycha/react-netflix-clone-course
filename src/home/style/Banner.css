@@ -11,6 +11,12 @@
 .navbar img{
     width: 100px;
 }
+.navbar .account img{
+float: inline-end;    
+width: 30px;
+    border-radius: 3px;
+    border: solid 3px white;
+}
 .navbar li{
     list-style: none;
     margin-right: 40px;
@@ -75,7 +81,7 @@
     transition: all 0.2s;
 }
 .banner--fadeBottom{
-    height: 7.4rem;
+    height: 3.5rem;
     background-image: linear-gradient(
         180deg,
         transparent,

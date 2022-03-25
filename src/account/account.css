@@ -74,22 +74,12 @@ main.profiles .content .btn {
     cursor: pointer;
 }
 
-
-main.profiles .content .btn-delete {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: rgba(255, 255, 255, 0.5);
-    border: none;
-    cursor: pointer;
-
+main.profiles .content button{
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
 }
 
 main.profiles .content li .img:hover .btn-delete{

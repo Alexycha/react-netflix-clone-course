@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import requests from '../home/requests';
 import { MovieInterface } from '../interface/movieinterface';
 import './details.css'
 
@@ -42,24 +41,28 @@ function Details(props: any) {
                                 <div className="banner">
                                     <img src={movie?.backdrop_path} />
                                     <button className="btn-close" onClick={props.close}
-                                    ><i className="fa-solid fa-xmark icon">X</i>
-                                    </button>
+                                    >X</button>
 
                                     <h1 className="name"> {movie?.name}</h1>
-
-
                                     <div className='actions'>
                                         <button className='btn-play btn'>
                                             <span>
-                                                <i className="fa-solid fa-play"></i>
+                                                <i className="fa fa-play"></i>
                                             </span>
                                             <span>Play</span>
                                         </button>
+                                        <span>
+                                                <i className="fas fa-plus"></i>
+                                            </span>
+                                            <span>
+                                                <i className="fas fa-heart"></i>
+                                            </span>
                                     </div>
 
                                 </div>
+                                <div className='details_fadeBottom'></div>
                                 <div className="description">
-                                    <div className="overview">
+                                    <div className="overview"><b>Description : </b>
                                         {movie?.overview}
                                     </div>
                                     <div className="info">

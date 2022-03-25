@@ -3,6 +3,7 @@ import axios from './axios';
 import requests from './requests';
 import './style/Banner.css';
 import { MovieInterface } from '../interface/movieinterface';
+import { Link } from 'react-router-dom';
 
 
 function Banner() {
@@ -10,7 +11,7 @@ function Banner() {
 
     useEffect(()=> {
         async function fetchData(){
-            const request = await axios.get(requests.fetchNetflixOriginals);
+            const request = await axios.get(requests.fetchPopular);
             setMovie(
             request.data.results[
                 Math.floor(Math.random() * request.data.results.length -1)
@@ -36,6 +37,7 @@ function Banner() {
                         <li>Accueil</li>
                         <li>Séries</li>
                         <li>Films</li>
+                        <li className='account'><button><Link to="../account"><img src ="https://i.pinimg.com/originals/1b/71/b8/1b71b85dd741ad27bffa5c834a7ed797.png"></img></Link></button></li>
                     </ul>
             </div>
         <div className='banner_content'>

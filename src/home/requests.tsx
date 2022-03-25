@@ -7,7 +7,10 @@ const requests = {
     fetchTrending: `https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}&language=en-US`,
     fetchNetflixOriginals: `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_networks=123`,
     fetchNews: `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_networks=123`,
-    fetchTopRated: "/movie/top_rated?api_key=${APIKEY}&language=en-US",
+    fetchPopular: `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&sort_by=vote_count.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`,
+    fetchRevenue: `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&sort_by=revenue.desc`,
+    fetchFrance: `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=fr-FR`,
+
 }
 
 export default requests;

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 import './account.css'
 
 
@@ -36,24 +37,9 @@ function Profiles() {
     }, [list]);
 
 
-    //save profiles to local storage
     const saveToStorage = (data: ProfileInterface[]) => {
         localStorage.setItem("profilesData", JSON.stringify(data));
     }
-
-
-    //add new card to 'active' list 
-    const addProfile = (profile: ProfileInterface) => {
-        setProfiles(Profiles => [...profiles, profile])
-    }
-
-    //delete list on delete button click
-    const handleDeleteProfile = (idProfile: number) => {
-        setProfiles(
-            profiles.filter(profile => profile.id !== idProfile)
-        )
-    }
-
 
     return (
         <main className='profiles'>
@@ -64,20 +50,15 @@ function Profiles() {
                         <span className='name'>irneiung</span>
                     </li> */}
                     {profiles.map((p) => (
-                        <li key={p.id}>
+                        <li key={p.id}><button>
+                            <Link to="../home">
                             <span className='img' style={{ backgroundImage: `url('${p.image}')` }}>
-                                <button className='btn-delete' onClick={() => handleDeleteProfile(p.id)}>X</button>
                             </span>
                             <span className='name'>{p.name}</span>
+                            </Link>
+ </button>
                         </li>
                     ))}
-                    {profiles.length < 5 && (
-                        <li>
-                            <button className='btn add' onClick={() => setShowAddProfile(true)}>
-                                <i className="fa-regular fa-plus"></i>
-                            </button>
-                        </li>
-                    )}
 
                 </ul>
             </div>

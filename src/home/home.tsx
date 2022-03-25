@@ -15,11 +15,13 @@ function Home(){
     return(
         <div className='App'>
             <Banner />
-            <Row onShowDetails={handleShow} title="NETFLIX ORIGINALS" 
+            <Row onShowDetails={handleShow} title="Tendances" 
             fetchUrl={requests.fetchNetflixOriginals}
             />
-            <Row onShowDetails={handleShow}  title="Trending Now" fetchUrl={requests.fetchTrending}/>
-            <Row onShowDetails={handleShow} title="Nouveautés" fetchUrl={requests.fetchNews}/>
+            <Row onShowDetails={handleShow} title="Populaires" fetchUrl={requests.fetchPopular}/>
+            <Row onShowDetails={handleShow} title="Top Box Office" fetchUrl={requests.fetchRevenue}/>
+            <Row onShowDetails={handleShow} title="Classiques français" fetchUrl={requests.fetchFrance}/>
+
         {
             showDetails && ( <Details id ={id} show={showDetails} close={() => setShowDetails(false)} />)
         }
