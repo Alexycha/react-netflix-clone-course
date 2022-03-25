@@ -1,0 +1,97 @@
+main.profiles {
+    padding: 0;
+    margin: 0;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main.profiles .content {
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.profiles .content ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+main.profiles .content li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+main.profiles .content li .img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+
+
+
+main.profiles .content .btn {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: 5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+main.profiles .content .btn-delete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+
+}
+
+main.profiles .content li .img:hover .btn-delete{
+    display: flex;
+}

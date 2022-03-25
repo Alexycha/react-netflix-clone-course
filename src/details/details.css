@@ -1,0 +1,133 @@
+.details {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details .container {
+    
+    width: 100%;
+    max-width: 700px;
+    height: 90%;
+    background-color: black;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.details .banner {
+    width: 100%;
+    position: relative;
+}
+
+.details .banner img {
+    width: 100%;
+}
+
+.details .banner .name {
+    position: absolute;
+    top: 50%;
+    left: 1em;
+}
+
+.details .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.76);
+    color: #fff;
+}
+
+.details .actions {
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.details .actions .btn {
+    padding: 0.7em 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.details .actions .btn.btn-play {
+    background-color: red;
+}
+
+.details .actions .btn-round {
+    width: 36px;
+    height: 36px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.76);
+    color: #fff;
+}
+
+.details .description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1em;
+}
+
+.details .description .overview {
+    flex: 1
+}
+
+.details .description .info {
+    font-size: 0.9rem;
+    list-style: none;
+}
+
+.details .description ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    ;
+    list-style: none;
+    margin: 0;
+}
+
+.details .description ul span {
+    color: rgb(175, 175, 175);
+}
+
+.details .select-container {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 1em;
+}
