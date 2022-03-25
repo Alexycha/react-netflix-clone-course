@@ -15,14 +15,12 @@ interface ProfileInterface {
 
 function Profiles() {
     const list:ProfileInterface[]=[
-    {id: 1, name: 'alexy', image :'https://i.pinimg.com/originals/1b/71/b8/1b71b85dd741ad27bffa5c834a7ed797.png'},
+    {id: 1, name: 'Alexy', image :'https://i.pinimg.com/originals/1b/71/b8/1b71b85dd741ad27bffa5c834a7ed797.png'},
     {id: 2, name: 'Julia', image : 'https://i.pinimg.com/originals/b6/77/cd/b677cd1cde292f261166533d6fe75872.png'},
-    {id: 3, name: 'maman', image: 'https://i.pinimg.com/originals/b4/0f/9f/b40f9f8fc0fb88aabf2a8acbc39c0ac0.png'},
-    {id: 4, name: 'papa', image : 'https://i.pinimg.com/originals/e3/94/30/e39430434d2b8207188f880ac66c6411.png'}]
+    {id: 3, name: 'Maman', image: 'https://i.pinimg.com/originals/b4/0f/9f/b40f9f8fc0fb88aabf2a8acbc39c0ac0.png'},
+    {id: 4, name: 'Papa', image : 'https://i.pinimg.com/originals/e3/94/30/e39430434d2b8207188f880ac66c6411.png'}]
 
-    const [showAddProfile, setShowAddProfile] = useState(false)
-    const [profiles, setProfiles] = useState<ProfileInterface[]>(() => {
-        //get data from local storage
+    const [profiles] = useState<ProfileInterface[]>(() => {
         const savedData: any = localStorage.getItem("profilesData");
         if (!savedData) {
             return []
@@ -31,7 +29,6 @@ function Profiles() {
         const Data = JSON.parse(savedData);
         return Data.length > 0 ? Data : [];
     })
-    //handle change on profiles
     useEffect(() => {
         saveToStorage(list)
     }, [list]);
@@ -45,10 +42,6 @@ function Profiles() {
         <main className='profiles'>
             <div className='content'>
                 <ul>
-                    {/* <li>
-                        <span className='img'></span>
-                        <span className='name'>irneiung</span>
-                    </li> */}
                     {profiles.map((p) => (
                         <li key={p.id}><button>
                             <Link to="../home">
