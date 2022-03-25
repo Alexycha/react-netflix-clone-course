@@ -20,7 +20,7 @@ function Home(){
             />
             <Row onShowDetails={handleShow} title="Populaires" fetchUrl={requests.fetchPopular}/>
             <Row onShowDetails={handleShow} title="Top Box Office" fetchUrl={requests.fetchRevenue}/>
-            <Row onShowDetails={handleShow} title="Classiques français" fetchUrl={requests.fetchFrance}/>
+            <Row onShowDetails={handleShow} title="Dernières sorties" fetchUrl={requests.fetchFrance}/>
 
         {
             showDetails && ( <Details id ={id} show={showDetails} close={() => setShowDetails(false)} />)

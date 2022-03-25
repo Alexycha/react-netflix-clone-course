@@ -1,6 +1,5 @@
 import React from 'react';
 
-// const APIKEY = "beee775200fa27d243272c30e0443dc5";
 const API_KEY = process.env.REACT_APP_API_KEY 
 
 const requests = {
